@@ -13,4 +13,7 @@
 set ts to do shell script "date '+[%y%m%d-%H%M]'"
 set msg to do shell script "date '+Current: %Y.%m.%d %H:%M'"
 set the clipboard to ts
+tell application "System Events"
+	keystroke ts & " "
+end tell
 return msg
